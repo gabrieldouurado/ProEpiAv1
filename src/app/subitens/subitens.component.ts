@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataSourceService } from '../data-source.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-subitens',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubitensComponent implements OnInit {
 
-  constructor() { }
+  subitens:Object;
+  constructor(private data:DataSourceService) { }
 
   ngOnInit() {
+    this.GetSubItens();
+  }
+
+  async GetSubItens(){
+    let response = await this.data.GetSubItens();
+    let data = await response.json();
+    this.subitens = data;
   }
 
 }

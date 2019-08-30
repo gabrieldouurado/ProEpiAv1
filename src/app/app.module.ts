@@ -8,8 +8,7 @@ import { environment } from '../environments/environment';
 
 //Import Modules
 import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule } from  '@angular/material';
-
-//Import Components
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,6 +19,7 @@ import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatBu
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     MatToolbarModule,
     MatButtonModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
