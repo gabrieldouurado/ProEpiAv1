@@ -1,0 +1,14 @@
+{
+   "itens": [
+     { "id": 1, "nome": "Item 1" },
+     { "id": 2, "nome": "Item 2" }
+   ],
+   "subitens": [
+      { "id": 1, "nome": "SubItem 1" },
+      { "id": 2, "nome": "SubItem 2" }
+   ],
+   "itemsubitens": [
+      { "item_id": 1, "sub_item_id": 1 },
+      { "item_id": 1, "sub_item_id": 2 }
+   ]
+}

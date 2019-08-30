@@ -21,10 +21,7 @@ import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatBu
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
-    MatSidenavModule,
-    MatListModule,
     MatButtonModule,
-    MatIconModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
