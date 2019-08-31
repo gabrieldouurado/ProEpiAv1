@@ -11,7 +11,7 @@ import { DataSourceService } from './data-source.service';
 //Import Modules
 import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule } from  '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { EditItensComponent } from './edit-itens/edit-itens.component';
 import { EditSubitensComponent } from './edit-subitens/edit-subitens.component';
 
@@ -30,6 +30,7 @@ import { EditSubitensComponent } from './edit-subitens/edit-subitens.component';
     MatToolbarModule,
     MatButtonModule,
     ReactiveFormsModule,
+    FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [DataSourceService],

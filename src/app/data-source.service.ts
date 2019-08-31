@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ItensData } from './itensData'
-import { SubItensData } from './SubItensData'
+import { SubItensData } from './subItensData'
+import { ItensSubItensData } from './itenSubitenData'
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 
@@ -80,7 +81,7 @@ export class DataSourceService {
   
   // GET
   GetSubIten(id): Observable<SubItensData> {
-    return this.http.get<SubItensData >(this.apiurl + '/subitens/' + id)
+    return this.http.get<SubItensData>(this.apiurl + '/subitens/' + id)
     .pipe(
       retry(1),
       catchError(this.errorHandl)
@@ -130,4 +131,12 @@ export class DataSourceService {
      return throwError(errorMessage);
   }
 
+  /////////////RELACOES//////////////
+  GetItenSubIten(): Observable<ItensSubItensData> {
+    return this.http.get<ItensSubItensData>(this.apiurl + '/itemsubitens/')
+    .pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    )
+  }
 }

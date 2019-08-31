@@ -41,6 +41,10 @@
     {
       "name": "Subitem 5",
       "id": 5
+    },
+    {
+      "name": "Subitem 6",
+      "id": 6
     }
   ],
   "itemsubitens": [
@@ -51,6 +55,10 @@
     {
       "item_id": 1,
       "sub_item_id": 2
+    },
+    {
+      "item_id": 2,
+      "sub_item_id": 4
     }
   ]
 }

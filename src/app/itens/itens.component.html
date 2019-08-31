@@ -1,10 +1,10 @@
 <h3>Adicionar Item</h3>
-<form [formGroup]="itenForm" (ngSubmit)="submitForm()" novalidate>
-    <div class="form-group">
+<form [formGroup]="itenForm" (ngSubmit)="submitFormItens()" novalidate>
+    <div>
         <label>Nome do Item: </label>
-        <input type="text" formControlName="name" class="form-control" maxlength="20">
+        <input type="text" formControlName="name" maxlength="20">
     </div>
-    <button type="submit" class="btn btn-primary">Adicionar</button>
+    <button type="submit">Adicionar</button>
 </form>
 
 <h3>Itens Salvos</h3>
@@ -27,3 +27,14 @@
         </tr>
     </tbody>
 </table>
+
+<h3>SubItens de um Item</h3>
+
+
+<p>ID do Item: </p>
+<input type="text" [(ngModel)]="ItenID"/>
+<button (click)="submitFormItensSubitens()">Listar</button>
+
+<div *ngFor="let SubitenFiltred of SubitensListFiltred">
+    <p>{{SubitenFiltred}}</p>
+</div>
