@@ -9,17 +9,16 @@ import { Observable } from 'rxjs';
 })
 export class SubitensComponent implements OnInit {
 
-  subitens:Object;
+  //subitens:Object;
   constructor(private data:DataSourceService) { }
 
   ngOnInit() {
-    this.GetSubItens();
+    //this.GetSubItens();
   }
-
+/*
   async GetSubItens(){
     let response = await this.data.GetSubItens();
     let data = await response.json();
     this.subitens = data;
-  }
-
+  }*/
 }

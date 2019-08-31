@@ -1,6 +1,45 @@
-<p>itens works!</p>
+<div>
+    <div>
+        <div>
+            <h3>Add Iten</h3>
+            <form [formGroup]="itenForm" (ngSubmit)="submitForm()" novalidate>
+                <div class="form-group">
+                    <label>Iten: </label>
+                    <input type="text" formControlName="name" class="form-control" maxlength="20">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
 
-<div *ngFor="let iten of itens">
-    <h3>id: {{iten.id}}</h3>
-    <p>Nome: {{iten.nome}}</p>
+    </div>
+</div>
+
+<div>
+    <div>
+        <div>
+            <div>
+                <h3>My Itens</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Issue Name</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let iten of ItensList">
+                            <th scope="row">{{iten.id}}</th>
+                            <td>{{iten.name}}</td>
+                            <td>
+                                <button type="button" [routerLink]="['/edit-itens/', iten.id]">Edit</button>
+                                <button type="button" (click)="deleteIten(iten)">Remove</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
 </div>
