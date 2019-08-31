@@ -1,7 +1,7 @@
-<h3>Editar Item</h3>
-<form [formGroup]="updateItenForm" (ngSubmit)="submitForm()" novalidate>
+<h3>Editar Subitens</h3>
+<form [formGroup]="updateSubItenForm" (ngSubmit)="submitForm()" novalidate>
     <div class="form-group">
-        <label>Nome do Item: </label>
+        <label>Nome do Subitem: </label>
         <input type="text" formControlName="name" class="form-control" maxlength="20">
     </div>
     <button type="submit" class="btn btn-primary">Editar</button>

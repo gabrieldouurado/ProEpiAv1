@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ItensData } from './itensData'
+import { SubItensData } from './SubItensData'
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 
@@ -19,6 +20,8 @@ export class DataSourceService {
     })
   }
 
+
+  /////////////ITENS///////////////
   // POST
   CreateIten(data): Observable<ItensData> {
     return this.http.post<ItensData>(this.apiurl + '/itens/', JSON.stringify(data), this.httpOptions)
@@ -63,6 +66,55 @@ export class DataSourceService {
       catchError(this.errorHandl)
     )
   }
+  //////////////END ITENS////////////////
+
+  ////////////SUBITENS//////////////////
+  // POST
+  CreateSubIten(data): Observable<SubItensData> {
+    return this.http.post<SubItensData>(this.apiurl + '/subitens/', JSON.stringify(data), this.httpOptions)
+    .pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    )
+  }
+  
+  // GET
+  GetSubIten(id): Observable<SubItensData> {
+    return this.http.get<SubItensData >(this.apiurl + '/subitens/' + id)
+    .pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    )
+  }
+
+  // GET
+  GetSubItens(): Observable<SubItensData> {
+    return this.http.get<SubItensData>(this.apiurl + '/subitens/')
+    .pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    )
+  }
+
+   // PUT
+   UpdateSubIten(id, data): Observable<SubItensData> {
+    return this.http.put<SubItensData>(this.apiurl + '/subitens/' + id, JSON.stringify(data), this.httpOptions)
+    .pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    )
+  }
+
+  // DELETE
+  DeleteSubIten(id){
+    return this.http.delete<SubItensData>(this.apiurl + '/subitens/' + id, this.httpOptions)
+    .pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    )
+  }
+
+  ////////////////END SUBITENS///////////////////
 
   // Error handling
   errorHandl(error) {

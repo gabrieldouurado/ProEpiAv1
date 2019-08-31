@@ -13,13 +13,15 @@ import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatBu
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditItensComponent } from './edit-itens/edit-itens.component';
+import { EditSubitensComponent } from './edit-subitens/edit-subitens.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    EditItensComponent
+    EditItensComponent,
+    EditSubitensComponent
   ],
   imports: [
     BrowserModule,

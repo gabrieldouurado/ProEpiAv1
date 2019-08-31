@@ -50,7 +50,7 @@ export class ItensComponent implements OnInit {
   submitForm() {
     this.dataSourceService.CreateIten(this.itenForm.value).subscribe(res => {
       console.log('Iten added!')
-      this.ngZone.run(() => this.router.navigateByUrl('/subitens'))
+      this.ngZone.run(() => this.router.navigateByUrl('/itens'))
     });
   }
 
