@@ -1,0 +1,80 @@
+{
+  "configVersion": 1,
+  "timestamp": 1567481160780,
+  "index": "https://gabrieldouurado.github.io/ProEpiAv1/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://gabrieldouurado.github.io/ProEpiAv1/favicon.ico",
+        "https://gabrieldouurado.github.io/ProEpiAv1/index.html",
+        "https://gabrieldouurado.github.io/ProEpiAv1/main-es2015.a60fdb7aad1ed92e0326.js",
+        "https://gabrieldouurado.github.io/ProEpiAv1/main-es5.a60fdb7aad1ed92e0326.js",
+        "https://gabrieldouurado.github.io/ProEpiAv1/manifest.webmanifest",
+        "https://gabrieldouurado.github.io/ProEpiAv1/polyfills-es2015.fd917e7c3ed57f282ee5.js",
+        "https://gabrieldouurado.github.io/ProEpiAv1/polyfills-es5.a66861b1a33373a3005d.js",
+        "https://gabrieldouurado.github.io/ProEpiAv1/runtime-es2015.24b02acc1f369d9b9f37.js",
+        "https://gabrieldouurado.github.io/ProEpiAv1/runtime-es5.24b02acc1f369d9b9f37.js",
+        "https://gabrieldouurado.github.io/ProEpiAv1/styles.da22db97b71058f021df.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://gabrieldouurado.github.io/ProEpiAv1/assets/icons/icon-128x128.png",
+        "https://gabrieldouurado.github.io/ProEpiAv1/assets/icons/icon-144x144.png",
+        "https://gabrieldouurado.github.io/ProEpiAv1/assets/icons/icon-152x152.png",
+        "https://gabrieldouurado.github.io/ProEpiAv1/assets/icons/icon-192x192.png",
+        "https://gabrieldouurado.github.io/ProEpiAv1/assets/icons/icon-384x384.png",
+        "https://gabrieldouurado.github.io/ProEpiAv1/assets/icons/icon-512x512.png",
+        "https://gabrieldouurado.github.io/ProEpiAv1/assets/icons/icon-72x72.png",
+        "https://gabrieldouurado.github.io/ProEpiAv1/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://gabrieldouurado.github.io/ProEpiAv1/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://gabrieldouurado.github.io/ProEpiAv1/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://gabrieldouurado.github.io/ProEpiAv1/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://gabrieldouurado.github.io/ProEpiAv1/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://gabrieldouurado.github.io/ProEpiAv1/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://gabrieldouurado.github.io/ProEpiAv1/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://gabrieldouurado.github.io/ProEpiAv1/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://gabrieldouurado.github.io/ProEpiAv1/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://gabrieldouurado.github.io/ProEpiAv1/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://gabrieldouurado.github.io/ProEpiAv1/index.html": "d1f467ff97cc5bceb878615f32da01e67e849def",
+    "https://gabrieldouurado.github.io/ProEpiAv1/main-es2015.a60fdb7aad1ed92e0326.js": "0cf980e3de4c327f66607fc44a9cab5595ffba47",
+    "https://gabrieldouurado.github.io/ProEpiAv1/main-es5.a60fdb7aad1ed92e0326.js": "758ebb42f938e8f9ad04be13118fcacfed9648bb",
+    "https://gabrieldouurado.github.io/ProEpiAv1/manifest.webmanifest": "fb9b5fd09bcf4e5bbb8969a9f09cf0ded509c3ff",
+    "https://gabrieldouurado.github.io/ProEpiAv1/polyfills-es2015.fd917e7c3ed57f282ee5.js": "e2f28c3743afd2899e140ad831df9675c233c02b",
+    "https://gabrieldouurado.github.io/ProEpiAv1/polyfills-es5.a66861b1a33373a3005d.js": "db091f7ef692a1d3add240459a2ea20c81cd6f19",
+    "https://gabrieldouurado.github.io/ProEpiAv1/runtime-es2015.24b02acc1f369d9b9f37.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "https://gabrieldouurado.github.io/ProEpiAv1/runtime-es5.24b02acc1f369d9b9f37.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "https://gabrieldouurado.github.io/ProEpiAv1/styles.da22db97b71058f021df.css": "d487850f1d3853ea0e212d4c2af3bffeadf708dd"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
