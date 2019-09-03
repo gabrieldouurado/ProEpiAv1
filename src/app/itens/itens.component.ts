@@ -16,23 +16,23 @@ export class ItensComponent implements OnInit {
   SubItensList: any = [];
   ItensSubitensList: any = [];
   SubitensListFiltred: any = [];
-  
-  
+
+
   ngOnInit() {
     this.addIten();
     this.listItens();
     this.listItensSubitens();
     this.listSubItens();
   }
-  
+
   constructor(
     public fb: FormBuilder,
     private ngZone: NgZone,
     private router: Router,
     public dataSourceService: DataSourceService
-  ){ }
+  ) { }
 
-  @Input() ItenID: string; 
+  @Input() ItenID: string;
 
   addIten() {
     this.itenForm = this.fb.group({
@@ -45,15 +45,15 @@ export class ItensComponent implements OnInit {
       this.ItensList = data;
       console.log(this.ItensList);
     })
-    
+
   }
 
-  deleteIten(data){
-    var index = index = this.ItensList.map(x => {return x.name}).indexOf(data.name);
-     return this.dataSourceService.DeleteIten(data.id).subscribe(res => {
+  deleteIten(data) {
+    var index = index = this.ItensList.map(x => { return x.name }).indexOf(data.name);
+    return this.dataSourceService.DeleteIten(data.id).subscribe(res => {
       this.ItensList.splice(index, 1)
-       console.log('Iten deleted!')
-     })
+      console.log(data)
+    })
   }
 
   submitFormItens() {
@@ -68,7 +68,7 @@ export class ItensComponent implements OnInit {
     return this.dataSourceService.GetItenSubIten().subscribe((data: {}) => {
       this.ItensSubitensList = data;
       console.log(this.ItensSubitensList);
-    })    
+    })
   }
 
   listSubItens() {
@@ -76,19 +76,36 @@ export class ItensComponent implements OnInit {
       this.SubItensList = data;
       console.log(this.SubItensList);
     })
-    
+
   }
 
-  submitFormItensSubitens(){
-      this.ItensSubitensList.map(ItensSubitens => {
-          if (ItensSubitens.item_id == this.ItenID) {
-            this.SubItensList.map(Subitens => {
-              if(Subitens.id == ItensSubitens.sub_item_id){
-                this.SubitensListFiltred.push(Subitens.name)
-                console.log(this.SubitensListFiltred)
-              }
+  submitFormItensSubitens() {
+    this.ItensSubitensList.map(ItensSubitens => {
+      if (ItensSubitens.item_id == this.ItenID) {
+        this.SubItensList.map(Subitens => {
+          if (Subitens.id == ItensSubitens.sub_item_id) {
+            this.SubitensListFiltred.push(Subitens.name)
+            console.log(this.SubitensListFiltred)
+          }
+        })
+      }
+    })
+  }
+
+  /////////////DELETE SUBITEN FOR ITEN///////////
+  deleteSubitenForIten(subitenName) {
+    this.SubItensList.map(subitens => {
+      if (subitens.name == subitenName) {
+        this.ItensSubitensList.map(itensSubitens => {
+          if (subitens.id == itensSubitens.sub_item_id && this.ItenID == itensSubitens.item_id) {
+            var index = index = this.SubitensListFiltred.map(x => { return x.name }).indexOf(subitenName);
+            return this.dataSourceService.DeleteSubitenForIten(itensSubitens.id).subscribe(res => {
+              this.SubitensListFiltred.splice(index, 1)
+              console.log('Iten deleted!')
             })
           }
-      })
+        })
+      }
+    })
   }
 }

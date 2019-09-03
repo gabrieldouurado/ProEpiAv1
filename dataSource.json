@@ -5,20 +5,8 @@
       "name": "Item 1"
     },
     {
-      "id": 2,
-      "name": "Item 2"
-    },
-    {
-      "name": "Item 3",
-      "id": 3
-    },
-    {
-      "name": "item 4",
-      "id": 4
-    },
-    {
-      "name": "item 5",
-      "id": 5
+      "name": "Item 2",
+      "id": 2
     }
   ],
   "subitens": [
@@ -29,36 +17,18 @@
     {
       "id": 2,
       "name": "SubItem 2"
-    },
-    {
-      "name": "Subitem 3",
-      "id": 3
-    },
-    {
-      "name": "Subitem 4",
-      "id": 4
-    },
-    {
-      "name": "Subitem 5",
-      "id": 5
-    },
-    {
-      "name": "Subitem 6",
-      "id": 6
     }
   ],
   "itemsubitens": [
     {
+      "id": 1,
       "item_id": 1,
       "sub_item_id": 1
     },
     {
       "item_id": 1,
-      "sub_item_id": 2
-    },
-    {
-      "item_id": 2,
-      "sub_item_id": 4
+      "sub_item_id": 2,
+      "id": 2
     }
   ]
 }

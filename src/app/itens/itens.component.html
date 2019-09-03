@@ -28,13 +28,20 @@
     </tbody>
 </table>
 
-<h3>SubItens de um Item</h3>
+<h3>Subitens de um Item</h3>
 
 
 <p>ID do Item: </p>
-<input type="text" [(ngModel)]="ItenID"/>
+<input type="text" [(ngModel)]="ItenID" />
 <button (click)="submitFormItensSubitens()">Listar</button>
-
-<div *ngFor="let SubitenFiltred of SubitensListFiltred">
-    <p>{{SubitenFiltred}}</p>
-</div>
+<br><br>
+<table>
+    <tbody>
+        <tr *ngFor="let SubitenFiltred of SubitensListFiltred">
+            <th>{{SubitenFiltred}}</th>
+            <td>
+                <button type="button" (click)="deleteSubitenForIten(SubitenFiltred)">Remover</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

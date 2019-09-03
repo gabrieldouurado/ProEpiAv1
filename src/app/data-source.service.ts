@@ -139,4 +139,23 @@ export class DataSourceService {
       catchError(this.errorHandl)
     )
   }
+
+  ////////////ADD SUBITENS FOR ITENS/////////////
+  CreateSubitenForIten(data): Observable<ItensSubItensData> {
+    return this.http.post<ItensSubItensData>(this.apiurl + '/itemsubitens/', JSON.stringify(data), this.httpOptions)
+    .pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    )
+  }
+
+  /////////////DELETE SUBITEN FOR ITEN///////////
+  DeleteSubitenForIten(id){
+    return this.http.delete<ItensSubItensData>(this.apiurl + '/itemsubitens/' + id, this.httpOptions)
+    .pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    )
+  }
+
 }

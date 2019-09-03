@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class SubitensComponent implements OnInit {
   subItenForm: FormGroup;
+  AddSubitenForItenForm: FormGroup;
   subItenArr: any = [];
   SubItensList: any = [];
   ItensSubitensList: any = [];
@@ -30,6 +31,7 @@ export class SubitensComponent implements OnInit {
     this.listSubItens();
     this.listItensSubitens();
     this.listItens();
+    this.AddSubitenForIten();
   }
 
   addSubIten() {
@@ -89,5 +91,27 @@ export class SubitensComponent implements OnInit {
             })
           }
       })
+  }
+
+  //////////////END RELACOES/////////////
+
+  /////////////ADD SUBITEN FOR ITEN///////////
+  AddSubitenForIten() {
+    this.AddSubitenForItenForm = this.fb.group({
+      item_id: [''],
+      sub_item_id: [''],
+    })
+  }
+
+  submitFormAddSubitenForIten(id,teste) {
+    this.AddSubitenForItenForm = this.fb.group({
+      item_id: [teste],
+      sub_item_id: [id],
+    });
+
+    this.dataSourceService.CreateSubitenForIten(this.AddSubitenForItenForm.value).subscribe(res => {
+      console.log('Subiten for Iten added!')
+      this.ngZone.run(() => window.location.reload())
+    });
   }
 }

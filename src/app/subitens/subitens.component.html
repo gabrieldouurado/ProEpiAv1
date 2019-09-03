@@ -14,6 +14,7 @@
             <th scope="col">ID</th>
             <th scope="col">Nome</th>
             <th scope="col">Ação</th>
+            <th scope="col">Add ao Item:</th>
         </tr>
     </thead>
     <tbody>
@@ -24,6 +25,16 @@
                 <button type="button" [routerLink]="['/edit-subitens/', subiten.id]">Editar</button>
                 <button type="button" (click)="deleteSubIten(subiten)">Remover</button>
             </td>
+            <td>
+                <form [formGroup]="AddSubitenForItenForm" (ngSubmit)="submitFormAddSubitenForIten(subiten.id, item_id.value)" novalidate>
+                    <div>
+                        <label>ID: </label>
+                        <input type="text" formControlName="item_id" maxlength="20" #item_id>
+                    </div>
+                    <button type="submit">Adicionar</button>
+                </form>
+
+            </td>
         </tr>
     </tbody>
 </table>
@@ -32,7 +43,7 @@
 
 
 <p>ID do Subitem: </p>
-<input type="text" [(ngModel)]="SubitenID"/>
+<input type="text" [(ngModel)]="SubitenID" />
 <button (click)="submitFormItensSubitens()">Listar</button>
 
 <div *ngFor="let ItenFiltred of ItensListFiltred">
